@@ -1,0 +1,12 @@
+# Godot-specific exclusions
+.import/
+# User-specific settings
+.godot/
+*.godot.editor/
+# Exported builds (if they are also in the project folder)
+bin/
+<<<<<<< HEAD
+export/
+=======
+export/
+>>>>>>> e9a1e78 (First commit)

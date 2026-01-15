@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/UI/OptionList/OptionList.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/TitleScreenScene/TitleScreen.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Big Boy.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="TitleScreen" type="Control"]
+margin_right = 320.0
+margin_bottom = 180.0
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="Control" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 320, 180 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer"]
+margin_left = 128.0
+margin_top = 30.0
+margin_right = 192.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 64, 36 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Pong"
+scroll_active = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 70.0
+margin_top = 100.0
+margin_right = 245.0
+margin_bottom = 156.0
+rect_min_size = Vector2( 175, 56 )
+
+[node name="OptionList" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 175.0
+script = ExtResource( 1 )
